@@ -1,0 +1,8 @@
+*.sln
+*.suo
+packages/
+_NCrunch_BankKata/
+BankKata.ncrunch*
+BankKata/bin/
+BankKata/obj/
+BankKata/BankKata.ncrunchproject

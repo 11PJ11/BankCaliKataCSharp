@@ -1,0 +1,11 @@
+﻿Feature: Print bank account statement
+
+Scenario 1: Print statement of different transactions
+	Given I deposited '1000' on '01/04/2014' with a balance of '1000.00'
+	And I withdrew '100' on '02/04/2014' with a balance of '900.00'
+	And I deposited '500' on '10/04/2014' with a balance of '1400.00'
+	When I print the statement 
+	Then I should receive the following output |DATE       | AMOUNT  | BALANCE
+	Then I should receive the following output |10/04/2014 | 500.00   | 1400.00
+    Then I should receive the following output |02/04/2014 | -100.00   | 900.00
+    Then I should receive the following output |01/04/2014 | 1000.00   | 1000.00
